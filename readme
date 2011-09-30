@@ -1,0 +1,34 @@
+PHP Automatic Thumbnailer.
+Written by Chris Hamilton (http://github.com/arcynum/Thumbnailer).
+
+This is a function which will automatically generate thumbnails for your webpages on the fly.
+Instead of having to manually create thumbnails for images on your website, this function will generate them for you, at any size you specify.
+
+To use this, simply include or require the PHP file in your workflow.
+
+include('thumbnailer.php'); (Code will continue if there is a problem)
+require('thumbnailer.php'); (Code will break if it cannot be included)
+
+Then you simply call the function in code.
+getThumbnail("relative/folder/where/image/is/located", "image_name_in_folder.jpg, width, height);
+
+So an actual call might be
+getThumbnail("images/banner/", "header_banner.jpg", 150, 150);
+
+This will generate a thumbnail in a subfolder called thumbs within the "images/banner/" folder. If the directory doesn't exist, it will be created.
+The thumbnail in the folder will be named like this
+
+widthxheight_originalname.jpg
+as above
+150x150_header_banner.jpg
+
+So the final file will be located as
+"images/banner/thumbs/150x150_header_banner.jpg"
+
+
+REMEMBER:
+The steps above will generate a thumbnail, but if you want to write it into the HTML itself, you need to print the return value.
+ie. print(getThumbnail("images/banner/", "header_banner.jpg", 150, 150));
+
+An image embed in HTML would be something like this.
+<img src="<?php print(getThumbnail("images/banner/", "header_banner.jpg", 150, 150)); ?>" title="The Headers Banner" />
