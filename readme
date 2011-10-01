@@ -3,6 +3,7 @@ Written by Chris Hamilton (http://github.com/arcynum/Thumbnailer).
 
 This is a function which will automatically generate thumbnails for your webpages on the fly.
 Instead of having to manually create thumbnails for images on your website, this function will generate them for you, at any size you specify.
+It currently supports jpg, jpeg, png & gifs.
 
 To use this, simply include or require the PHP file in your workflow.
 
