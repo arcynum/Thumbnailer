@@ -1,6 +1,9 @@
 PHP Automatic Thumbnailer.
 Written by Chris Hamilton (http://github.com/arcynum/Thumbnailer).
 
+I have added this project under the BSD license. Feel free to use at your leisure.
+It is not required under the license, but I would love to see your finished projects. Shoot me an email at <arcynum at gmail dot com>
+
 This is a function which will automatically generate thumbnails for your webpages on the fly.
 Instead of having to manually create thumbnails for images on your website, this function will generate them for you, at any size you specify.
 It currently supports jpg, jpeg, png & gifs.
@@ -33,3 +36,4 @@ ie. print(getThumbnail("images/banner/", "header_banner.jpg", 150, 150));
 
 An image embed in HTML would be something like this.
 <img src="<?php print(getThumbnail("images/banner/", "header_banner.jpg", 150, 150)); ?>" title="The Headers Banner" />
+
